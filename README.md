@@ -14,15 +14,21 @@ An automated, high-performance Python data pipeline designed for e-commerce sync
 ## System Architecture & Previews
 
 ### 1. Database Management (Dual-Sync)
-The pipeline synchronizes scraped data across both local SQLite and remote MySQL databases simultaneously.
-![Database Synchronization Preview](https://github.com/YOUR_USERNAME/YOUR_REPO/raw/main/screenshots/database_preview.png)
-*(Replace the URL above with your database screenshot link, e.g., DBeaver / phpMyAdmin showing the SQLite/MySQL tables)*
+
+*
+<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (312)" src="https://github.com/user-attachments/assets/c701e02d-ab13-457f-ab0c-85835107df47" />
+<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (313)" src="https://github.com/user-attachments/assets/e449b479-4dbc-4dd5-a63d-762b1309e610" />
+<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (314)" src="https://github.com/user-attachments/assets/9ac7c91e-b109-4081-9b04-dd2a07b2fc36" />
+*
 
 ### 2. Live E-shop Integration (WooCommerce)
 Successfully processed product updates, prices, and variations rendered directly on the live store.
-![WooCommerce Storefront Preview](https://github.com/YOUR_USERNAME/YOUR_REPO/raw/main/screenshots/eshop_preview.png)
-*(Replace the URL above with your WooCommerce e-shop screenshot link showing the updated products)*
-
+*
+<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (315)" src="https://github.com/user-attachments/assets/3bb885d0-d868-4368-ab8a-e45dc4239ee0" />
+<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (316)" src="https://github.com/user-attachments/assets/9072f5cf-0e9b-46c6-982e-a1fb1e1157c0" />
+<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (317)" src="https://github.com/user-attachments/assets/78af3704-cb92-49a7-ac4c-daa4cbcd83d0" />
+<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (318)" src="https://github.com/user-attachments/assets/57fdf255-581e-4456-9a93-b5d645c67430" />
+*
 ---
 
 ## Περιγραφή Project  
@@ -37,21 +43,6 @@ Successfully processed product updates, prices, and variations rendered directly
 * **Επαγγελματικό Σύστημα Καταγραφής:** Δημιουργία αναλυτικών logs με χρονική σήμανση, metrics συγχρονισμού και αναφορές εργασίας (Job Reports).
 
 ---
-## Δείγμα / Proof of Work
-
-# Database / Βάση Δεδομένων
-*
-<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (312)" src="https://github.com/user-attachments/assets/c701e02d-ab13-457f-ab0c-85835107df47" />
-<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (313)" src="https://github.com/user-attachments/assets/e449b479-4dbc-4dd5-a63d-762b1309e610" />
-<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (314)" src="https://github.com/user-attachments/assets/9ac7c91e-b109-4081-9b04-dd2a07b2fc36" />
-*
-# E-shop
-*
-<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (315)" src="https://github.com/user-attachments/assets/3bb885d0-d868-4368-ab8a-e45dc4239ee0" />
-<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (316)" src="https://github.com/user-attachments/assets/9072f5cf-0e9b-46c6-982e-a1fb1e1157c0" />
-<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (317)" src="https://github.com/user-attachments/assets/78af3704-cb92-49a7-ac4c-daa4cbcd83d0" />
-<img width="1920" height="1080" alt="Στιγμιότυπο οθόνης (318)" src="https://github.com/user-attachments/assets/57fdf255-581e-4456-9a93-b5d645c67430" />
-*
 
 ## Execution Logs / Ιστορικό Εκτέλεσης
 
