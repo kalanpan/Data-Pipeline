@@ -9,6 +9,32 @@ from pipline import run_pipeline
 from my_toolkit.my_tools.web_tools import fetch_html, parse_html
 from my_toolkit.my_tools.logger_tools import setup_logging
 
+
+"""
+E-commerce Scraper Orchestrator
+================================
+Main entry point that coordinates the complete scraping pipeline:
+1. Discovery: Fetches category pages and extracts product URLs
+2. Pipeline: Runs scraping, parsing, and data normalization
+3. Database Sync: Updates SQLite/MySQL with new data
+4. WooCommerce Sync: Pushes updates to live store
+
+Features:
+- Configurable via SETTINGS dictionary (toggle DB/WooCommerce sync)
+- Statistics tracking (categories, URLs, products)
+- Professional job reporting with duration metrics
+- Error resilience (continues on individual brand failures)
+
+Dependencies:
+- my_toolkit (web_tools, logger_tools)
+- config.py (scraping URLs and settings)
+- db_manager.py (dual database synchronization)
+- wp_sync.py (WooCommerce REST API integration)
+- scraper_tools.py (URL extraction utilities)
+- pipeline.py (data processing pipeline)
+"""
+
+
 # --- [1] CONTROL PANEL (Διακόπτες) ---
 SETTINGS = {
     "SYNC_DB": True,  # Ενημέρωση SQLite/MySQL
