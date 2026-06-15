@@ -7,6 +7,13 @@ from my_toolkit.my_tools.sqlite3_tools import (
     insert_many, query_db, update_record
 )
 
+"""
+Database Synchronization Module
+--------------------------------
+Handles dual-database synchronization (SQLite + MySQL) for e-commerce product data.
+Supports products, variants, and price history tracking with change detection.
+"""
+
 # --- CONFIGURATION (Schemas) ---
 SCHEMAS = [
     """
@@ -88,7 +95,7 @@ MYSQL_SCHEMAS = [
 ]
 
 def init_new_db():
-    db_path = r'C:\python_projects\toolkit\kaizer_eshop\db\kaizer_eshop.db'
+    db_path = config.DB_PATH
     try:
         conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
