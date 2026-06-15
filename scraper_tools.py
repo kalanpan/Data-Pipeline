@@ -4,10 +4,20 @@ from urllib.parse import urljoin
 
 # --- [1] URL FILTERS ---
 
-def is_valid_url(url):
-    """Ελέγχει αν το URL ανήκει στο domain που μας ενδιαφέρει."""
+def is_valid_url(url, domain="example-shop.com"):
+    """
+    [EN] Validates if URL belongs to the target domain.
+    [EL] Ελέγχει αν το URL ανήκει στο domain που μας ενδιαφέρει.
+    
+    Args:
+        url (str): The URL to validate
+        domain (str): The target domain (default: "example-shop.com")
+    
+    Returns:
+        bool: True if valid, False otherwise
+    """
     if not url: return False
-    return "kaizershop.gr" in url and "community" not in url
+    return domain in url and "community" not in url
 
 
 def get_unique_urls(url_list):
@@ -52,24 +62,39 @@ def get_urls_from_category_html(soup_obj):
 
 
 # --- [3] CATEGORY MAPPING (Optional) ---
-def organize_kaizer_map(data):
-    """Οργάνωση των κατηγοριών σε ομάδες (Smartphones, Accessories κλπ)."""
-    mapping = {
-        "Smartphones": ["cell-phones", "smartphones", "apple", "samsung", "xiaomi"],
-        "Home_Appliances": ["gia-to-spiti", "tv", "vacuum", "kitchen"],
-        "Computing_Gaming": ["consoles", "gaming", "perifereiaka"],
+def organize_category_map(data, custom_mapping=None):
+    """
+    [EN] Organizes categories into logical groups based on URL keywords.
+    [EL] Οργανώνει τις κατηγορίες σε λογικές ομάδες βάσει λέξεων-κλειδιών URL.
+    
+    Args:
+        data (list): List of category dictionaries with 'title' and 'url'
+        custom_mapping (dict, optional): Custom category mapping. Defaults to generic mapping.
+    
+    Returns:
+        dict: Organized categories with items grouped by type
+    """
+    # Default generic mapping (can be overridden)
+    default_mapping = {
+        "Electronics": ["electronics", "devices", "gadgets"],
+        "Mobile": ["mobile", "phones", "smartphones"],
+        "Computing": ["computers", "laptops", "gaming"],
         "Accessories": ["accessories", "cases", "chargers"]
     }
+    
+    mapping = custom_mapping if custom_mapping else default_mapping
     organized = {key: [] for key in mapping.keys()}
     organized["Uncategorized"] = []
 
     for item in data:
         assigned = False
-        url_l = item['url'].lower()
+        url_lower = item['url'].lower()
         for cat, keywords in mapping.items():
-            if any(kw in url_l for kw in keywords):
+            if any(kw in url_lower for kw in keywords):
                 organized[cat].append(item)
                 assigned = True
                 break
-        if not assigned: organized["Uncategorized"].append(item)
+        if not assigned:
+            organized["Uncategorized"].append(item)
+    
     return organized
