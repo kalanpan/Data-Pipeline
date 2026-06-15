@@ -30,7 +30,7 @@ def get_url(soup):
 
 
 def extract_json_data(soup_obj):
-    """Εξάγει δεδομένα από το dataLayer script του Kaizer"""
+    """Εξάγει δεδομένα από το dataLayer script του myshop"""
     scripts = soup_obj.find_all('script')
     for script in scripts:
         if 'gtin' in script.text:
@@ -167,7 +167,7 @@ def transform_specs(specs_dict):
         "main_camera_mp": 0.0
     }
 
-    # Helper για μετατροπή κειμένου σε float (χειρίζεται το κόμμα του Kaizer)
+    # Helper για μετατροπή κειμένου σε float 
     def parse_to_float(text):
         if not text: return 0.0
         # Αντικατάσταση κόμματος με τελεία και εύρεση αριθμού (ακέραιου ή δεκαδικού)
@@ -456,7 +456,23 @@ def normalize_availability(raw_status):
     return "OUT_OF_STOCK"
 
 
-def get_kaizer_json_data(soup, url):
+def get_scrape_json_data(soup, url):
+    """
+    [EN] Extracts product data from embedded JSON dataLayer scripts.
+    Combines HTML scraping with JSON parsing for comprehensive data extraction.
+    
+    [EL] Εξάγει δεδομένα προϊόντος από ενσωματωμένα JSON dataLayer scripts.
+    Συνδυάζει HTML scraping με JSON parsing για ολοκληρωμένη εξαγωγή δεδομένων.
+    
+    Args:
+        soup (BeautifulSoup): The parsed HTML object
+        url (str): The product URL
+    
+    Returns:
+        dict: Structured product data with products_table, variants_table, 
+              store_details_table, and price_history_table
+              OR None if extraction fails
+    """
     target_script = soup.find('script', string=re.compile(r'gtin'))
     if not target_script: return None
 
@@ -511,8 +527,8 @@ def get_kaizer_json_data(soup, url):
 
                 # Table: store_details
                 "store_details_table": {
-                    "store_name": "kaizer",
-                    "source_scraper": "kaizer_json_hybrid",
+                    "store_name": "example_store",
+                    "source_scraper": "generic_json_hybrid",
                     "product_link": url,
                     "availability_raw": get_availability(soup),
                     "availability_normalized": normalize_availability(get_availability(soup) or "")
