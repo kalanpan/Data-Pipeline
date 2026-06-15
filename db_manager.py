@@ -7,6 +7,20 @@ from my_toolkit.my_tools.my_sql_tools import db_transaction_wrapper, insert_many
 
 def dual_sync(grouped_data):
     """
+    [EN] Unified synchronization to both SQLite and MySQL databases.
+    Both databases use the same smart bulk_sync_action logic.
+    
+    [EL] Ενοποιημένος συγχρονισμός σε SQLite και MySQL.
+    Και οι δύο βάσεις χρησιμοποιούν την ΙΔΙΑ έξυπνη λογική bulk_sync_action.
+    
+    Args:
+        grouped_data (dict): Grouped product data to synchronize
+    
+    Returns:
+        dict: {"status": "success", "data": {"sqlite": bool, "mysql": bool}, "error_message": None}
+              OR {"status": "fail", "data": None, "error_message": str}
+    
+    ---
     Ενοποιημένος συγχρονισμός σε SQLite και MySQL.
     Και οι δύο βάσεις χρησιμοποιούν πλέον την ΙΔΙΑ έξυπνη λογική bulk_sync_action.
     """
