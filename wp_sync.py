@@ -57,7 +57,7 @@ def sync_to_woocommerce(grouped_data):
     logging.info("--- Έναρξη Έξυπνου Συγχρονισμού με WooCommerce ---")
 
     for model_key, content in grouped_data.items():
-        brand = content['info'].get('brand', 'Kaizer')
+        brand = content['info'].get('brand', 'Example Store')
         info = content.get('info', {})
 
         for v in content['variants']:
