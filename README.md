@@ -89,5 +89,5 @@ Duration of job  : 14.93 mins
 ```
 
 
-Built with ❤️ using Python & AI-Assisted Development
+Built with Python and enhanced through AI-assisted development.
 
