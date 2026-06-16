@@ -193,7 +193,7 @@ def sync_product_entry(cursor, info, is_mysql=True):
 
     res = cursor.fetchone()
 
-    # Εδώ είναι η παγίδα: Αν το res είναι None, το res[0] θα πετάξει το error που είδες
+    #Αν το res είναι None, το res[0] θα πετάξει error 
     if res is None:
         logging.info(f"ERROR: Product '{clean_name}' was NOT found in DB after insert!")
         return {"status": "error", "message": f"Model {clean_name} not found after insert"}
