@@ -51,7 +51,7 @@ database synchronization and WooCommerce integration., ## Features
 
 - Requests
 
-# WORKFLOW
+### WORKFLOW
 
 Category Pages
       │
@@ -76,7 +76,6 @@ SQLite Sync
                           │
                           ▼
                   WooCommerce Update
-
              
 Built with ❤️ using Python & AI-Assisted Development
 
