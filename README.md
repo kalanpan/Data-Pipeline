@@ -1,5 +1,5 @@
 
-E-commerce Product Synchronization Pipeline
+## E-commerce Product Synchronization Pipeline
 
 An automated system designed for the collection, normalization, and synchronization of e-commerce product data to WooCommerce.
 Key Features
