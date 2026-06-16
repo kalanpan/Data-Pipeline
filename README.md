@@ -50,7 +50,7 @@ database synchronization and WooCommerce integration., ## Features
 - BeautifulSoup
 
 - Requests
-
+```mermaid
 graph TD
     A[Category Pages] --> Bhttps://www.discovery.com/
     B --> C[Product Scraping]
@@ -60,6 +60,12 @@ graph TD
     F --> G[Price History]
     F --> H[MySQL Sync]
     H --> I[WooCommerce Update]
-             
+```
 Built with ❤️ using Python & AI-Assisted Development
+
+* **Καθαρότητα**: Δεν χρειάζεται να βάζεις URLs ή περίεργα σύμβολα μέσα στο διάγραμμα. Το Mermaid σχεδιάζει τις γραμμές αυτόματα.
+
+**Δοκίμασέ το και θα δεις τη διαφορά αμέσως.** Αν και πάλι δεν εμφανιστεί διάγραμμα, τότε το GitHub μπορεί να μην έχει ενεργοποιήσει το Mermaid στο συγκεκριμένο repo (αν και πλέον είναι στάνταρ σε όλα). Αν δεν παίξει ούτε έτσι, τότε η μόνη ρεαλιστική λύση για να φαίνεται όμορφο είναι να το ανεβάσεις ως μια **εικόνα (PNG/JPG)** μέσα στον φάκελο `docs/` και να βάλεις ένα link στο README: `![Workflow](docs/workflow.png)`.
+
+Θέλεις να το δοκιμάσεις έτσι και να μου πεις αν έπαιξε;
 
