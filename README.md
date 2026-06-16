@@ -51,31 +51,15 @@ database synchronization and WooCommerce integration., ## Features
 
 - Requests
 
-### WORKFLOW
-
-Category Pages
-      │
-      ▼
-URL Discovery
-      │
-      ▼
-Product Scraping
-      │
-      ▼
-Data Normalization
-      │
-      ▼
-Product Grouping
-      │
-      ▼
-SQLite Sync
-      │
-      ├───────────► Price History
-      │
-      └───────────► MySQL Sync
-                          │
-                          ▼
-                  WooCommerce Update
+graph TD
+    A[Category Pages] --> Bhttps://www.discovery.com/
+    B --> C[Product Scraping]
+    C --> D[Data Normalization]
+    D --> E[Product Grouping]
+    E --> F[SQLite Sync]
+    F --> G[Price History]
+    F --> H[MySQL Sync]
+    H --> I[WooCommerce Update]
              
 Built with ❤️ using Python & AI-Assisted Development
 
