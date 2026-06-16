@@ -1,11 +1,27 @@
 
-# E-commerce Product Synchronization Pipeline
+E-commerce Product Synchronization Pipeline
 
+An automated system designed for the collection, normalization, and synchronization of e-commerce product data to WooCommerce.
+Key Features
 
-Automated product discovery, normalization,
+    Discovery & Scraping: Automated URL discovery and data extraction from category pages.
 
-database synchronization and WooCommerce integration.
+    Data Normalization: Cleaning, deduplication, and standardization of product titles, descriptions, and specifications.
 
+    Dual Database Sync: Concurrent synchronization with SQLite (local cache) and MySQL (production).
+
+    Price Tracking: Historical price logging and trend analysis.
+
+    WooCommerce Integration: Automated product creation and inventory updates via REST API (utilizing delta updates).
+
+Architecture
+
+Discovery → Scraping → Normalization → Database Storage → WooCommerce Sync.
+Implementation Status
+
+    Production-ready: Includes robust error handling, retry mechanisms, and a 7-day rotation logging system.
+
+    Performance: Optimized API usage through delta updates, reducing unnecessary data overhead.
 
 ## Features
 
