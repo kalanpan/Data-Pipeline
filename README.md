@@ -25,8 +25,10 @@ database synchronization and WooCommerce integration.
 
 - Duplicate detection
 
-- Change detection, ## Workflow
+- Change detection
 
+  
+- ## Workflow
 
 1. Discover product URLs
 
@@ -40,7 +42,9 @@ database synchronization and WooCommerce integration.
 
 6. Track price changes
 
-7. Update WooCommerce catalog, ## Tech Stack
+7. Update WooCommerce catalog
+
+## Tech Stack
 
 
 - Python
@@ -52,6 +56,8 @@ database synchronization and WooCommerce integration.
 - BeautifulSoup
 
 - Requests
+
+
 ```mermaid
 graph TD
     A[Category Pages] --> B[URL Discovery]
