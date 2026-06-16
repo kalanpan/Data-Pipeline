@@ -52,20 +52,33 @@ database synchronization and WooCommerce integration., ## Features
 - Requests
 ```mermaid
 graph TD
-    A[Category Pages] --> Bhttps://www.discovery.com/
+    A[Category Pages] --> B[URL Discovery]
     B --> C[Product Scraping]
     C --> D[Data Normalization]
     D --> E[Product Grouping]
-    E --> F[SQLite Sync]
-    F --> G[Price History]
-    F --> H[MySQL Sync]
-    H --> I[WooCommerce Update]
+    E --> F{Database Sync}
+    F --> G[SQLite Local]
+    F --> H[MySQL Production]
+    G --> I[Price History Tracking]
+    H --> J[WooCommerce API Update]
+    
+    style F fill:#f9f,stroke:#333,stroke-width:2px
 ```
+
+========================================
+ JOB REPORT
+========================================
+Categories Scanned : 3
+Total URLs Found: 78
+Products Approved : 35
+Database Updated : OK
+WooCommerce Updated : OK
+Status : Success
+Duration of job  : 14.93 mins
+========================================
+
+
+
+
 Built with ❤️ using Python & AI-Assisted Development
-
-* **Καθαρότητα**: Δεν χρειάζεται να βάζεις URLs ή περίεργα σύμβολα μέσα στο διάγραμμα. Το Mermaid σχεδιάζει τις γραμμές αυτόματα.
-
-**Δοκίμασέ το και θα δεις τη διαφορά αμέσως.** Αν και πάλι δεν εμφανιστεί διάγραμμα, τότε το GitHub μπορεί να μην έχει ενεργοποιήσει το Mermaid στο συγκεκριμένο repo (αν και πλέον είναι στάνταρ σε όλα). Αν δεν παίξει ούτε έτσι, τότε η μόνη ρεαλιστική λύση για να φαίνεται όμορφο είναι να το ανεβάσεις ως μια **εικόνα (PNG/JPG)** μέσα στον φάκελο `docs/` και να βάλεις ένα link στο README: `![Workflow](docs/workflow.png)`.
-
-Θέλεις να το δοκιμάσεις έτσι και να μου πεις αν έπαιξε;
 
