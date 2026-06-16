@@ -64,7 +64,9 @@ graph TD
     
     style F fill:#f9f,stroke:#333,stroke-width:2px
 ```
+### REPORT
 
+```mermaid
 ========================================
  JOB REPORT
 ========================================
@@ -76,8 +78,7 @@ WooCommerce Updated : OK
 Status : Success
 Duration of job  : 14.93 mins
 ========================================
-
-
+```
 
 
 Built with ❤️ using Python & AI-Assisted Development
