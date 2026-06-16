@@ -4,8 +4,10 @@
 
 Automated product discovery, normalization,
 
-database synchronization and WooCommerce integration., ## Features
+database synchronization and WooCommerce integration.
 
+
+## Features
 
 - Product discovery from category pages
 
